@@ -1,8 +1,7 @@
 <p align="center">
   <h1 align="center">🛡️ Guardian</h1>
   <p align="center">
-    <strong>Find and fix errors, broken references, and performance issues in your Unity project — fast & effortlessly!</strong><br>
-    <em>Encontre e corrija erros de forma fácil e rápida nos seus códigos e assets na Unity!</em>
+    <strong>Find and fix errors, broken references, and performance issues in your Unity project fast and effortlessly!</strong>
   </p>
   <p align="center">
     <a href="https://github.com/Resenha-Studios/guardian/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
@@ -15,20 +14,16 @@
 
 ---
 
-## ⚡ What is Guardian? / O que é o Guardian?
+## ⚡ What is Guardian?
 
 > ### 🎯 In a Nutshell
-> **Guardian is an open-source Unity tool used to find and fix errors, missing scripts, and performance bottlenecks in your code quickly and easily!**
+> **Guardian is an in-editor tool used to find and fix errors, missing scripts, and performance bottlenecks in your Unity code quickly and easily!**
 > 
 > With a single click (or shortcut **`Ctrl + G`** / **`Cmd + G`**), Guardian audits your entire project in milliseconds directly inside the Unity Editor and detects:
 > - ❌ **Missing Scripts & Broken References**: Finds broken prefabs and deleted scripts before they crash your build.
 > - ⚠️ **Code Anti-Patterns & Lag**: Spots expensive calls (like `FindObjectOfType`, `Camera.main`) and memory allocations (`new List`) hidden inside `Update()` loops.
 > - 🌐 **Hardcoded Strings**: Ensures your UI is properly localized.
-> - 📋 **One-Click Fix & AI Export**: Clean corrupted objects automatically and export structured Markdown reports directly to AI assistants (Claude, ChatGPT, Gemini).
->
-> ---
->
-> *🇧🇷 **Em poucas palavras:** O Guardian é utilizado para **achar erros de forma fácil e rápida nos seus códigos e projetos na Unity!** Em vez de caçar bugs manualmente, aperte `Ctrl + G` e o Guardian escaneia tudo instantaneamente, mostrando a linha exata no seu editor e oferecendo correções automáticas com 1 clique.*
+> - 📋 **One-Click Quick Fix**: Cleans corrupted components automatically and provides direct links to the exact line in your code editor.
 
 ---
 
@@ -52,7 +47,7 @@ Open Guardian directly from the top menu:
 - **Localization Compliance Scanner**:
   - Validates that runtime UI elements leverage `LocalizedString` rather than hardcoded string literals.
 - **One-Click Markdown Export**:
-  - Built-in **Copy Report** button generates a clean, structured Markdown breakdown ready to paste into AI tools (Gemini, Claude, ChatGPT) or share on Slack/Discord.
+  - Built-in **Copy Report** button generates a clean, structured Markdown breakdown ready to paste into issue trackers, pull requests, or team chats (Slack, Discord).
 - **Clean UI Toolkit Dashboard**:
   - Weighted **Health Score** calculation with letter grades (`A+` to `F`).
   - Native multilingual interface supporting **English**, **Português**, **Español**, **日本語**, and **简体中文**.
