@@ -1,0 +1,49 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="project://database/Packages/com.resenha.guardian/Editor/UI/GuardianWindow.uss" />
+
+    <ui:VisualElement class="guardian-root">
+        <!-- Header -->
+        <ui:VisualElement class="guardian-header">
+            <ui:VisualElement class="guardian-brand">
+                <ui:Label name="header-title" class="guardian-title" text="Guardian" />
+                <ui:Label name="header-subtitle" class="guardian-subtitle" text="Project Integrity &amp; Quality Auditor" />
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="guardian-header-actions">
+                <ui:DropdownField name="lang-dropdown" class="guardian-lang-dropdown" tooltip="Select Editor Display Language" />
+                <ui:Button name="btn-copy-report" class="guardian-btn-secondary" text="Copy Report" tooltip="Copy complete Markdown report to clipboard (ideal for AI or team review)" />
+                <ui:Button name="btn-scan" class="guardian-btn-scan" text="Scan Project" tooltip="Run local on-demand audit across scripts, prefabs, and UI." />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Score Overview Card -->
+        <ui:VisualElement class="guardian-score-card">
+            <ui:VisualElement class="guardian-score-left">
+                <ui:Label name="grade-badge" class="guardian-grade-badge" text="A+" tooltip="Health grade based on detected project issues." />
+                <ui:VisualElement class="guardian-score-details">
+                    <ui:Label name="score-title" class="guardian-score-title" text="100% Health Score" />
+                    <ui:Label name="score-summary" class="guardian-score-sub" text="0 issues detected" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="guardian-score-right">
+                <ui:Label name="stat-duration" class="guardian-stat-time" text="Ready to scan" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Filter Chips -->
+        <ui:VisualElement class="guardian-filter-bar">
+            <ui:Button name="filter-all" class="guardian-chip active" text="All (0)" tooltip="Show all audit results" />
+            <ui:Button name="filter-critical" class="guardian-chip" text="Critical (0)" tooltip="Filter critical build/runtime-breaking issues" />
+            <ui:Button name="filter-warnings" class="guardian-chip" text="Warnings (0)" tooltip="Filter performance &amp; anti-pattern issues" />
+            <ui:Button name="filter-suggestions" class="guardian-chip" text="Suggestions (0)" tooltip="Filter localization &amp; style recommendations" />
+        </ui:VisualElement>
+
+        <!-- Issue List / ScrollView -->
+        <ui:ScrollView name="issues-scrollview" class="guardian-list-container">
+            <ui:VisualElement name="empty-state" class="guardian-empty-state">
+                <ui:Label name="empty-state-text" class="guardian-empty-text" text="No issues found! Project is clean and robust." />
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

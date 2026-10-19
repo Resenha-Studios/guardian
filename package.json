@@ -1,0 +1,32 @@
+{
+  "name": "com.resenha.guardian",
+  "version": "0.1.0",
+  "displayName": "Guardian",
+  "description": "Ferramenta modular e open-source de auditoria e integridade de projetos Unity 6+. Executa em memória sob demanda, detectando scripts ausentes, referências quebradas, antipadrões em C# e conformidade de localização com dashboard em UI Toolkit.",
+  "unity": "6000.0",
+  "unityRelease": "0b1",
+  "license": "MIT",
+  "dependencies": {
+    "com.unity.localization": "1.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Resenha-Studios/guardian.git"
+  },
+  "keywords": [
+    "guardian",
+    "linter",
+    "code-quality",
+    "integrity",
+    "audit",
+    "prefabs",
+    "antipatterns",
+    "ui-toolkit",
+    "open-source",
+    "unity"
+  ],
+  "author": {
+    "name": "Resenha Studios",
+    "url": "https://github.com/Resenha-Studios"
+  }
+}

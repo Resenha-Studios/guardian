@@ -1,0 +1,322 @@
+/* Guardian Editor Styling - Clean & Minimal AAA */
+
+.guardian-root {
+    flex-grow: 1;
+    background-color: #0b0f14;
+    padding: 16px;
+    color: #e2e8f0;
+    font-size: 13px;
+}
+
+/* Header Section */
+.guardian-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom-width: 1px;
+    border-bottom-color: #242f3d;
+    margin-bottom: 16px;
+}
+
+.guardian-brand {
+    flex-direction: column;
+}
+
+.guardian-title {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: #f8fafc;
+    letter-spacing: 0.5px;
+}
+
+.guardian-subtitle {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.guardian-header-actions {
+    flex-direction: row;
+    align-items: center;
+}
+
+.guardian-lang-dropdown {
+    width: 110px;
+    margin-right: 12px;
+}
+
+.guardian-btn-secondary {
+    background-color: #1e2632;
+    color: #e2e8f0;
+    font-size: 12px;
+    -unity-font-style: bold;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #354456;
+    margin-right: 8px;
+    cursor: link;
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.15s;
+}
+
+.guardian-btn-secondary:hover {
+    background-color: #273140;
+    border-color: #38bdf8;
+    color: #ffffff;
+}
+
+.guardian-btn-secondary:active {
+    background-color: #141a22;
+}
+
+.guardian-btn-secondary.copied {
+    background-color: #065f46;
+    border-color: #10b981;
+    color: #34d399;
+}
+
+.guardian-btn-scan {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-size: 12px;
+    -unity-font-style: bold;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 6px;
+    border-width: 0;
+    cursor: link;
+    transition-property: background-color;
+    transition-duration: 0.15s;
+}
+
+.guardian-btn-scan:hover {
+    background-color: #0ea5e9;
+}
+
+.guardian-btn-scan:active {
+    background-color: #0369a1;
+}
+
+/* Score & Overview Bar */
+.guardian-score-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141a22;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #242f3d;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+}
+
+.guardian-score-left {
+    flex-direction: row;
+    align-items: center;
+}
+
+.guardian-grade-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #10b981;
+    color: #ffffff;
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-right: 14px;
+}
+
+.guardian-grade-badge.grade-f {
+    background-color: #ef4444;
+}
+
+.guardian-grade-badge.grade-c {
+    background-color: #f59e0b;
+}
+
+.guardian-grade-badge.grade-b {
+    background-color: #0284c7;
+}
+
+.guardian-grade-badge.grade-a {
+    background-color: #10b981;
+}
+
+.guardian-score-details {
+    flex-direction: column;
+}
+
+.guardian-score-title {
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: #f8fafc;
+}
+
+.guardian-score-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.guardian-score-right {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.guardian-stat-time {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* Filter Chips Bar */
+.guardian-filter-bar {
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.guardian-chip {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background-color: #1e2632;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-right: 8px;
+    border-width: 1px;
+    border-color: #242f3d;
+    cursor: link;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.15s;
+}
+
+.guardian-chip:hover {
+    background-color: #273140;
+    color: #e2e8f0;
+}
+
+.guardian-chip.active {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
+    -unity-font-style: bold;
+}
+
+/* Issue List & Cards */
+.guardian-list-container {
+    flex-grow: 1;
+}
+
+.guardian-empty-state {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.guardian-empty-text {
+    font-size: 13px;
+    color: #94a3b8;
+    -unity-text-align: middle-center;
+}
+
+.guardian-issue-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141a22;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #242f3d;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    transition-property: background-color, border-color;
+    transition-duration: 0.15s;
+}
+
+.guardian-issue-card:hover {
+    background-color: #1e2632;
+    border-color: #354456;
+}
+
+.guardian-card-info {
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 12px;
+}
+
+.guardian-severity-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.guardian-severity-dot.sev-critical {
+    background-color: #ef4444;
+}
+
+.guardian-severity-dot.sev-warning {
+    background-color: #f59e0b;
+}
+
+.guardian-severity-dot.sev-suggestion {
+    background-color: #38bdf8;
+}
+
+.guardian-card-text {
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.guardian-card-title {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: #f8fafc;
+}
+
+.guardian-card-path {
+    font-size: 10px;
+    color: #94a3b8;
+    margin-top: 1px;
+}
+
+.guardian-card-actions {
+    flex-direction: row;
+    align-items: center;
+}
+
+.guardian-btn-action {
+    background-color: #1e2632;
+    color: #e2e8f0;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #354456;
+    margin-left: 6px;
+    cursor: link;
+}
+
+.guardian-btn-action:hover {
+    background-color: #273140;
+    border-color: #38bdf8;
+}
+
+.guardian-btn-quickfix {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
+}
+
+.guardian-btn-quickfix:hover {
+    background-color: #0ea5e9;
+}
