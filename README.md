@@ -1,25 +1,41 @@
 <p align="center">
   <h1 align="center">🛡️ Guardian</h1>
   <p align="center">
-    <strong>Modular Project Integrity & Code Quality Auditor for Unity 6+</strong>
+    <strong>Find and fix errors, broken references, and performance issues in your Unity project — fast & effortlessly!</strong><br>
+    <em>Encontre e corrija erros de forma fácil e rápida nos seus códigos e assets na Unity!</em>
   </p>
   <p align="center">
     <a href="https://github.com/Resenha-Studios/guardian/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
     <img src="https://img.shields.io/badge/Unity-6000.0%2B-black.svg?logo=unity" alt="Unity Version"></a>
     <img src="https://img.shields.io/badge/UI-UI%20Toolkit-informational.svg" alt="UI Toolkit"></a>
     <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome"></a>
+    <img src="https://img.shields.io/badge/Localization-5%20Languages-orange.svg" alt="Localization"></a>
   </p>
 </p>
 
 ---
 
-## ⚡ Overview
+## ⚡ What is Guardian? / O que é o Guardian?
 
-**Guardian** is an open-source, on-demand project integrity and code quality tool built for Unity 6+. 
+> ### 🎯 In a Nutshell
+> **Guardian is an open-source Unity tool used to find and fix errors, missing scripts, and performance bottlenecks in your code quickly and easily!**
+> 
+> With a single click (or shortcut **`Ctrl + G`** / **`Cmd + G`**), Guardian audits your entire project in milliseconds directly inside the Unity Editor and detects:
+> - ❌ **Missing Scripts & Broken References**: Finds broken prefabs and deleted scripts before they crash your build.
+> - ⚠️ **Code Anti-Patterns & Lag**: Spots expensive calls (like `FindObjectOfType`, `Camera.main`) and memory allocations (`new List`) hidden inside `Update()` loops.
+> - 🌐 **Hardcoded Strings**: Ensures your UI is properly localized.
+> - 📋 **One-Click Fix & AI Export**: Clean corrupted objects automatically and export structured Markdown reports directly to AI assistants (Claude, ChatGPT, Gemini).
+>
+> ---
+>
+> *🇧🇷 **Em poucas palavras:** O Guardian é utilizado para **achar erros de forma fácil e rápida nos seus códigos e projetos na Unity!** Em vez de caçar bugs manualmente, aperte `Ctrl + G` e o Guardian escaneia tudo instantaneamente, mostrando a linha exata no seu editor e oferecendo correções automáticas com 1 clique.*
 
-Unlike traditional pre-commit hooks or external CI linters that require slow headless Unity batch runs, **Guardian runs directly inside the Unity Editor in milliseconds** using native in-memory APIs (`AssetDatabase`, serialized reflection, and AST-like pattern matching).
+---
 
-You run it whenever you want via **`Tools > Resenha > Guardian`** or the **`Ctrl + G`** (`Cmd + G`) shortcut.
+## 🚀 How to Open
+
+Open Guardian directly from the top menu:  
+👉 **`Tools > Resenha > Guardian`** (or press **`Ctrl + G`** / **`Cmd + G`**).
 
 ---
 
