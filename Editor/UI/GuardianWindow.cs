@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Resenha.Guardian.Editor.Architecture;
 using Resenha.Guardian.Editor.Core;
 using Resenha.Guardian.Editor.Localization;
 using Resenha.Guardian.Editor.Scanners;
@@ -21,6 +23,8 @@ namespace Resenha.Guardian.Editor.UI
         private Label _headerTitle;
         private Label _headerSubtitle;
         private DropdownField _langDropdown;
+        private Button _btnViewDiagram;
+        private Button _btnCopyMermaid;
         private Button _btnCopyReport;
         private Button _btnScan;
         private Label _gradeBadge;
@@ -94,6 +98,8 @@ namespace Resenha.Guardian.Editor.UI
             _headerTitle = _root.Q<Label>("header-title");
             _headerSubtitle = _root.Q<Label>("header-subtitle");
             _langDropdown = _root.Q<DropdownField>("lang-dropdown");
+            _btnViewDiagram = _root.Q<Button>("btn-view-diagram");
+            _btnCopyMermaid = _root.Q<Button>("btn-copy-mermaid");
             _btnCopyReport = _root.Q<Button>("btn-copy-report");
             _btnScan = _root.Q<Button>("btn-scan");
             _gradeBadge = _root.Q<Label>("grade-badge");
@@ -144,6 +150,16 @@ namespace Resenha.Guardian.Editor.UI
             if (_btnCopyReport != null)
             {
                 _btnCopyReport.clicked += CopyReportToClipboard;
+            }
+
+            if (_btnCopyMermaid != null)
+            {
+                _btnCopyMermaid.clicked += CopyMermaidToClipboard;
+            }
+
+            if (_btnViewDiagram != null)
+            {
+                _btnViewDiagram.clicked += ViewArchitectureDiagram;
             }
 
             if (_filterAll != null)
@@ -202,6 +218,53 @@ namespace Resenha.Guardian.Editor.UI
             Debug.Log("[Guardian] Audit report copied to clipboard!");
         }
 
+        private void CopyMermaidToClipboard()
+        {
+            var analyzer = new ArchitectureAnalyzer();
+            var graph = analyzer.BuildGraph("Assets");
+            string mermaid = MermaidExporter.ExportToMermaid(graph);
+            EditorGUIUtility.systemCopyBuffer = mermaid;
+
+            if (_btnCopyMermaid != null)
+            {
+                _btnCopyMermaid.text = GuardianStrings.Get("mermaid_copied");
+                _btnCopyMermaid.AddToClassList("copied");
+
+                double restoreTime = EditorApplication.timeSinceStartup + 2.0;
+                void ResetButton()
+                {
+                    if (EditorApplication.timeSinceStartup >= restoreTime)
+                    {
+                        EditorApplication.update -= ResetButton;
+                        if (_btnCopyMermaid != null)
+                        {
+                            _btnCopyMermaid.text = GuardianStrings.Get("copy_mermaid");
+                            _btnCopyMermaid.RemoveFromClassList("copied");
+                        }
+                    }
+                }
+                EditorApplication.update += ResetButton;
+            }
+
+            Debug.Log("[Guardian] Mermaid architecture diagram copied to clipboard!");
+        }
+
+        private void ViewArchitectureDiagram()
+        {
+            var analyzer = new ArchitectureAnalyzer();
+            var graph = analyzer.BuildGraph("Assets");
+            string tempDir = Path.Combine(Directory.GetCurrentDirectory(), "Temp");
+            if (!Directory.Exists(tempDir))
+            {
+                Directory.CreateDirectory(tempDir);
+            }
+            string htmlPath = Path.Combine(tempDir, "Guardian_Architecture.html");
+            MermaidExporter.ExportToHtmlViewer(graph, htmlPath);
+
+            Application.OpenURL("file://" + htmlPath);
+            Debug.Log($"[Guardian] Opened architecture diagram in browser: {htmlPath}");
+        }
+
         private void ApplyLocalization()
         {
             if (_headerTitle != null) _headerTitle.text = GuardianStrings.Get("window_title");
@@ -211,6 +274,16 @@ namespace Resenha.Guardian.Editor.UI
             {
                 _btnCopyReport.text = GuardianStrings.Get("copy_report");
                 _btnCopyReport.tooltip = GuardianStrings.Get("copy_tooltip");
+            }
+            if (_btnCopyMermaid != null)
+            {
+                _btnCopyMermaid.text = GuardianStrings.Get("copy_mermaid");
+                _btnCopyMermaid.tooltip = "Copy Mermaid.js diagram code to clipboard";
+            }
+            if (_btnViewDiagram != null)
+            {
+                _btnViewDiagram.text = GuardianStrings.Get("view_interactive");
+                _btnViewDiagram.tooltip = GuardianStrings.Get("diagram_tooltip");
             }
             if (_emptyStateText != null) _emptyStateText.text = GuardianStrings.Get("clean_state");
         }
