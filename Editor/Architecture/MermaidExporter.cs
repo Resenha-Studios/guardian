@@ -100,7 +100,7 @@ mermaid.initialize({
     lineColor: '#94a3b8', clusterBkg: '#ffffff', clusterBorder: '#cbd5e1', titleColor: '#475569'
   },
   // SVG labels (no foreignObject) keep PNG export working.
-  flowchart: { htmlLabels: false, curve: 'basis', nodeSpacing: 36, rankSpacing: 80, padding: 14 }
+  flowchart: { htmlLabels: false, curve: 'step', nodeSpacing: 36, rankSpacing: 80, padding: 14 }
 });
 
 const nodes = JSON.parse(document.getElementById('graph-data').textContent);
