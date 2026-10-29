@@ -28,7 +28,7 @@ namespace Resenha.Guardian.Editor.Localization
             // Window Header & Core
             { "window_title", new[] { "Guardian", "Guardian", "Guardian", "Guardian", "Guardian" } },
             { "window_subtitle", new[] { "Project Integrity & Quality Auditor", "Auditor de Integridade e Qualidade do Projeto", "Auditor de Integridad y Calidad del Projeto", "プロジェクト完全性・品質監査", "项目完整性与质量审计" } },
-            { "scan_button", new[] { "Scan Project", "Auditar Projeto", "Auditar Proyecto", "プロジェクトを監査", "审计项目" } },
+            { "scan_button", new[] { "Scan", "Auditar", "Auditar", "監査", "审计" } },
             { "scanning", new[] { "Scanning...", "Auditando...", "Auditando...", "監査中...", "正在审计..." } },
             { "score_label", new[] { "Health Score", "Pontuação de Saúde", "Puntaje de Salud", "健全性スコア", "健康评分" } },
             
@@ -47,12 +47,12 @@ namespace Resenha.Guardian.Editor.Localization
             { "ping_asset", new[] { "Select Asset", "Selecionar Asset", "Seleccionar Asset", "アセットを選択", "选中资源" } },
             { "quick_fix", new[] { "Quick Fix", "Correção Rápida", "Corrección Rápida", "クイック修正", "快速修复" } },
             { "open_code", new[] { "Open Line", "Abrir Linha", "Abrir Línea", "行を開く", "打开代码行" } },
-            { "copy_report", new[] { "Copy Report", "Copiar Relatório", "Copiar Informe", "レポートをコピー", "复制报告" } },
+            { "copy_report", new[] { "Report", "Relatório", "Informe", "レポート", "报告" } },
             { "copied", new[] { "Copied!", "Copiado!", "¡Copiado!", "コピーしました！", "已复制！" } },
             { "copy_tooltip", new[] { "Copy complete Markdown report to clipboard (ideal for AI or team review)", "Copiar relatório completo em Markdown para a área de transferência (ideal para IA ou revisão de time)", "Copiar informe completo en Markdown al portapapeles (ideal para IA o revisión de equipo)", "Markdown形式の完全なレポートをクリップボードにコピー（AIまたはチームレビューに最適）", "将完整的Markdown报告复制到剪贴板（适合AI分析或团队审查）" } },
-            { "copy_mermaid", new[] { "Copy Mermaid", "Copiar Mermaid", "Copiar Mermaid", "Mermaidをコピー", "复制Mermaid" } },
-            { "mermaid_copied", new[] { "Mermaid Copied!", "Mermaid Copiado!", "¡Mermaid Copiado!", "Mermaidをコピーしました！", "Mermaid已复制！" } },
-            { "view_interactive", new[] { "View Diagram", "Ver Diagrama", "Ver Diagrama", "図を表示", "查看图表" } },
+            { "copy_mermaid", new[] { "Mermaid", "Mermaid", "Mermaid", "Mermaid", "Mermaid" } },
+            { "mermaid_copied", new[] { "Copied!", "Copiado!", "¡Copiado!", "コピー済!", "已复制!" } },
+            { "view_interactive", new[] { "Diagram", "Diagrama", "Diagrama", "図", "图表" } },
             { "diagram_tooltip", new[] { "Open interactive Pan & Zoom dependency diagram in browser", "Abrir diagrama de dependências interativo com Pan e Zoom no navegador", "Abrir diagrama de dependencias interactivo con Pan y Zoom en el navegador", "ブラウザでインタラクティブな依存関係図を開く", "在浏览器中打开交互式依赖关系图" } },
             { "language_selector", new[] { "Language", "Idioma", "Idioma", "言語", "语言" } }
         };

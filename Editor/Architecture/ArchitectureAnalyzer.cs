@@ -91,6 +91,12 @@ namespace Resenha.Guardian.Editor.Architecture
                         }
                     }
 
+                    // Desconsiderar ScriptableObjects da arquitetura para focar em lógica de runtime/sistemas
+                    if (node.BaseTypeName == "ScriptableObject")
+                    {
+                        continue;
+                    }
+
                     knownTypes[className] = node;
                     graph.AddNode(node);
                 }

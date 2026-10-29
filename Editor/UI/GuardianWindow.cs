@@ -44,7 +44,7 @@ namespace Resenha.Guardian.Editor.UI
         {
             var window = GetWindow<GuardianWindow>();
             window.titleContent = new GUIContent("Guardian", EditorGUIUtility.IconContent("d_UnityEditor.ConsoleWindow").image);
-            window.minSize = new Vector2(560, 420);
+            window.minSize = new Vector2(440, 360);
             window.Show();
         }
 

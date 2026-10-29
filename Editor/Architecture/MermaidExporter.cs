@@ -64,12 +64,12 @@ namespace Resenha.Guardian.Editor.Architecture
                 }
             }
 
-            // 3. Estilos de Destaque por Calor / Acoplamento
+            // 3. Estilos de Destaque por Calor / Acoplamento (Estilo Reto, Minimalista & Monospace)
             sb.AppendLine();
-            sb.AppendLine("    %% Styling Rules");
-            sb.AppendLine("    classDef normal fill:#1e293b,stroke:#38bdf8,stroke-width:1px,color:#f8fafc;");
-            sb.AppendLine("    classDef highCoupling fill:#78350f,stroke:#f59e0b,stroke-width:2px,color:#fef3c7;");
-            sb.AppendLine("    classDef godObject fill:#7f1d1d,stroke:#ef4444,stroke-width:3px,color:#fee2e2;");
+            sb.AppendLine("    %% Styling Rules - Straight & Square Engineering Theme");
+            sb.AppendLine("    classDef normal fill:#161b22,stroke:#30363d,stroke-width:1.5px,color:#c9d1d9,rx:0,ry:0;");
+            sb.AppendLine("    classDef highCoupling fill:#382405,stroke:#d29922,stroke-width:2px,color:#f0883e,rx:0,ry:0;");
+            sb.AppendLine("    classDef godObject fill:#3d1419,stroke:#f85149,stroke-width:2.5px,color:#ff7b72,rx:0,ry:0;");
 
             foreach (var node in graph.Nodes.Values)
             {
@@ -109,33 +109,34 @@ namespace Resenha.Guardian.Editor.Architecture
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: #0b0f14;
-            color: #e2e8f0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'JetBrains Mono', Consolas, monospace;
             overflow: hidden;
         }}
         #header {{
             position: absolute;
-            top: 16px;
-            left: 16px;
+            top: 14px;
+            left: 14px;
             z-index: 10;
-            background: rgba(20, 26, 34, 0.9);
-            border: 1px solid #242f3d;
-            border-radius: 8px;
-            padding: 12px 18px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            background: rgba(22, 27, 34, 0.95);
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            padding: 10px 16px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }}
         h1 {{
             margin: 0;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
-            color: #f8fafc;
+            color: #f0f6fc;
+            letter-spacing: 0.3px;
         }}
         p {{
             margin: 4px 0 0 0;
             font-size: 11px;
-            color: #94a3b8;
+            color: #8b949e;
         }}
         #container {{
             width: 100%;
@@ -148,12 +149,33 @@ namespace Resenha.Guardian.Editor.Architecture
             width: 100%;
             height: 100%;
         }}
+        /* Subgraph boxes styling */
+        .cluster rect {{
+            fill: #161b22 !important;
+            stroke: #30363d !important;
+            stroke-width: 1.5px !important;
+            rx: 0 !important;
+            ry: 0 !important;
+        }}
+        .cluster text {{
+            fill: #58a6ff !important;
+            font-weight: 600 !important;
+            font-family: monospace !important;
+        }}
+        .edgePath path {{
+            stroke: #58a6ff !important;
+            stroke-width: 1.5px !important;
+        }}
+        .marker {{
+            fill: #58a6ff !important;
+            stroke: #58a6ff !important;
+        }}
     </style>
 </head>
 <body>
     <div id=""header"">
-        <h1>🛡️ Guardian &bull; Architecture Dependency Graph</h1>
-        <p>Interactive Pan &amp; Zoom &bull; Drag to move, scroll to zoom &bull; Total Nodes: {graph.Nodes.Count}</p>
+        <h1>Guardian Architecture Graph</h1>
+        <p>Interactive Pan &amp; Zoom &bull; Scroll to zoom, drag to pan &bull; Total Nodes: {graph.Nodes.Count}</p>
     </div>
     <div id=""container"">
         <pre class=""mermaid"">
@@ -165,7 +187,11 @@ namespace Resenha.Guardian.Editor.Architecture
             startOnLoad: true,
             theme: 'dark',
             securityLevel: 'loose',
-            flowchart: {{ useMaxWidth: false, htmlLabels: true }}
+            flowchart: {{
+                curve: 'linear',
+                useMaxWidth: false,
+                htmlLabels: true
+            }}
         }});
 
         window.addEventListener('load', () => {{
@@ -179,11 +205,11 @@ namespace Resenha.Guardian.Editor.Architecture
                         controlIconsEnabled: true,
                         fit: true,
                         center: true,
-                        minZoom: 0.1,
-                        maxZoom: 10
+                        minZoom: 0.05,
+                        maxZoom: 15
                     }});
                 }}
-            }}, 500);
+            }}, 400);
         }});
     </script>
 </body>

@@ -8,10 +8,10 @@
             </ui:VisualElement>
             <ui:VisualElement class="guardian-header-actions">
                 <ui:DropdownField name="lang-dropdown" tooltip="Select Editor Display Language" class="guardian-lang-dropdown"/>
-                <ui:Button name="btn-view-diagram" text="View Diagram" tooltip="Open interactive Pan &amp; Zoom dependency diagram in browser" class="guardian-btn-secondary"/>
-                <ui:Button name="btn-copy-mermaid" text="Copy Mermaid" tooltip="Copy Mermaid.js diagram code to clipboard" class="guardian-btn-secondary"/>
-                <ui:Button name="btn-copy-report" text="Copy Report" tooltip="Copy complete Markdown report to clipboard (ideal for AI or team review)" class="guardian-btn-secondary"/>
-                <ui:Button name="btn-scan" text="Scan Project" tooltip="Run local on-demand audit across scripts, prefabs, and UI." class="guardian-btn-scan"/>
+                <ui:Button name="btn-view-diagram" text="Diagram" tooltip="Open interactive Pan &amp; Zoom dependency diagram in browser" class="guardian-btn-secondary"/>
+                <ui:Button name="btn-copy-mermaid" text="Mermaid" tooltip="Copy Mermaid.js diagram code to clipboard" class="guardian-btn-secondary"/>
+                <ui:Button name="btn-copy-report" text="Report" tooltip="Copy complete Markdown report to clipboard (ideal for AI or team review)" class="guardian-btn-secondary"/>
+                <ui:Button name="btn-scan" text="Scan" tooltip="Run local on-demand audit across scripts, prefabs, and UI." class="guardian-btn-scan"/>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement class="guardian-score-card">
